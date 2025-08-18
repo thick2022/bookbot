@@ -8,7 +8,7 @@ def get_book_text(book_path: str) -> str:
 
 
 def main():
-    # Require exactly one argument: the path to the book
+    
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
@@ -20,11 +20,11 @@ def main():
 
     text = get_book_text(book_path)
 
-    # Word count
+    
     print("----------- Word Count ----------")
     print(f"Found {word_count(text)} total words")
 
-    # Character count (sorted)
+    
     print("--------- Character Count -------")
     counts = char_count(text)
     for ch, n in sort_on(counts):
